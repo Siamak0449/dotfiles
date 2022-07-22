@@ -1,0 +1,32 @@
+# reloade sxhkd
+alt + Escape 
+	pkill -USR1 -x sxhkd
+
+# ham quit ham restarte bspwm 
+# super alt q bara bastan bspwm va super alt r vase reload file bspwmrc
+super + alt + {q,r}
+	bspc {quit:,wm -r}
+
+# baz kardan terminal alacritty
+super + Return
+	alacritty
+# bastan v close ye node
+alt + {q,w}
+	bspc node -{k,c}
+
+# taghir state node
+super + space
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# float kardan node
+alt + f
+	bspc node -t floating
+
+# fullscreen node
+ctrl + shift + f
+	bspc node -t fullscreen
+
+
+# baz kardan dmenu 
+super + p
+	dmenu_run

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ex_mon_stat=$(xrandr --query | grep 'VGA1')
+
+if [[ $ex_mon_stat = *connected* ]]; then
+	xrandr --output LVDS1 --primary --mode 1366x768 --rotate normal --output VGA1 --mode 1024x768 --rotate normal --left-of LVDS1
+fi
