@@ -1,10 +1,11 @@
 #!/bin/bash
 
 xsetroot -cursor_name left_ptr
+screenkey &
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom --config=$HOME/.config/bspwm/picom.conf &
 
-bspc "LVDS-1" -d 1 2 3 4 5 6 2
+bspc monitor "LVDS-1" -d 1 2 3 4 5 6 2
 
 # tanzimate node ha
 bspc config border_width 2
