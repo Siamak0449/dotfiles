@@ -5,7 +5,7 @@ alt + Escape
 # ham quit ham restarte bspwm 
 # super alt q bara bastan bspwm va super alt r vase reload file bspwmrc
 super + alt + {q,r}
-	bspc {quit:,wm -r}
+	bspc {quit,wm -r}
 
 # baz kardan terminal alacritty
 super + Return
@@ -43,3 +43,12 @@ super + ctrl + alt + {Left,Down,Up,Right}
 # move bin window ha
 super + {h,j,k,l}
 	bspc node -f {west,south,north,east}
+
+
+super + g 
+	bspc node -s biggest
+
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} focused:'^{1-9,10}'
+
